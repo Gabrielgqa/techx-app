@@ -1,1 +1,17 @@
-<p>login works!</p>
+<h2>Login</h2>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email:</label>
+    <input type="email" formControlName="email" />
+  </div>
+
+  <div>
+    <label>Senha:</label>
+    <input type="password" formControlName="password" />
+  </div>
+
+  <button type="submit">Entrar</button>
+</form>
+
+<p>Não tem conta? <a routerLink="/register">Cadastre-se</a></p>
